@@ -1,0 +1,71 @@
+{
+ "_about": "How a statement line is read. First match wins; `match` is a case-insensitive regex on the description. `kind`: supplier = a purchase that needs a document; transfer = money between the company's own accounts; internal = the line is its own evidence; platform = already covered by a platform settlement. `keys` are supplier keys from the document register. Moorgate Electrical is deliberately absent, to show what an unknown merchant does.",
+ "rules": [
+  {
+   "match": "HARBOURLINE CARD DD|^Direct Debit$",
+   "supplier": "Company card repayment",
+   "kind": "transfer",
+   "note": "Card balance repaid from the current account by Direct Debit. Both sides of the same money."
+  },
+  {
+   "match": "Rewards Redemption",
+   "supplier": "Card rewards",
+   "kind": "internal",
+   "note": "Points redeemed against the balance: income with no document beyond the statement."
+  },
+  {
+   "match": "^Interest",
+   "supplier": "Card interest",
+   "kind": "internal"
+  },
+  {
+   "match": "SERVICE CHARGE",
+   "supplier": "Bank charges",
+   "kind": "internal"
+  },
+  {
+   "match": "MARKETPLACE PAYOUTS",
+   "supplier": "Marketplace payout",
+   "kind": "platform",
+   "note": "Net payout: the gross sales, fees and refunds behind it come from the platform settlement, not from a document."
+  },
+  {
+   "match": "PENNINE FASTENERS",
+   "supplier": "Pennine Fasteners",
+   "keys": ["pennine"],
+   "kind": "supplier",
+   "action": "Invoice emailed on dispatch. Search the purchases mailbox for the amount, or ask the account manager."
+  },
+  {
+   "match": "TIDEWATER CHANDLERY",
+   "supplier": "Tidewater Chandlery",
+   "keys": ["tidewater"],
+   "kind": "supplier",
+   "action": "Download the invoice from the trade portal."
+  },
+  {
+   "match": "NORTHWIND MARINE",
+   "supplier": "Northwind Marine",
+   "keys": ["northwind"],
+   "kind": "supplier",
+   "cycle": { "startDay": 6, "lag": 1 },
+   "action": "On the monthly statement: find the cycle's invoices in the mailbox before asking for a copy.",
+   "note": "Bills from the 6th to the 5th and collects the cycle after."
+  },
+  {
+   "match": "CASTLEFORD OILS",
+   "supplier": "Castleford Oils",
+   "keys": ["castleford"],
+   "kind": "supplier",
+   "cycle": { "startDay": 1, "lag": 1 },
+   "note": "Calendar-month statement, collected the following month, sometimes in two transfers on the same day."
+  },
+  {
+   "match": "STACKHAUL",
+   "supplier": "Stackhaul",
+   "keys": ["stackhaul"],
+   "kind": "supplier",
+   "action": "Invoices are in the Stackhaul billing console, in US dollars."
+  }
+ ]
+}

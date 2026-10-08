@@ -1,0 +1,39 @@
+{
+ "_about": "The document register for the demo month and the one before it: what the company was invoiced, before anything is known about how it was paid. Entirely invented, including the suppliers. Credit notes carry a negative total.",
+ "documents": [
+  { "id": "NM-801", "supplierKey": "northwind", "supplier": "Northwind Marine", "kind": "invoice", "number": "NM-801", "date": "2026-06-08", "total": 214.50, "currency": "GBP", "file": "docs/NM-801.pdf", "month": "2026-06" },
+  { "id": "NM-802", "supplierKey": "northwind", "supplier": "Northwind Marine", "kind": "invoice", "number": "NM-802", "date": "2026-06-15", "total": 332.10, "currency": "GBP", "file": "docs/NM-802.pdf", "month": "2026-06" },
+  { "id": "NM-803", "supplierKey": "northwind", "supplier": "Northwind Marine", "kind": "invoice", "number": "NM-803", "date": "2026-06-22", "total": 118.40, "currency": "GBP", "file": "docs/NM-803.pdf", "month": "2026-06" },
+  { "id": "NM-804", "supplierKey": "northwind", "supplier": "Northwind Marine", "kind": "invoice", "number": "NM-804", "date": "2026-06-29", "total": 96.00, "currency": "GBP", "file": "docs/NM-804.pdf", "month": "2026-06" },
+
+  { "id": "CO-311", "supplierKey": "castleford", "supplier": "Castleford Oils", "kind": "invoice", "number": "CO-311", "date": "2026-06-11", "total": 402.30, "currency": "GBP", "file": "docs/CO-311.pdf", "month": "2026-06" },
+  { "id": "CO-312", "supplierKey": "castleford", "supplier": "Castleford Oils", "kind": "invoice", "number": "CO-312", "date": "2026-06-18", "total": 548.12, "currency": "GBP", "file": "docs/CO-312.pdf", "month": "2026-06" },
+  { "id": "CO-313", "supplierKey": "castleford", "supplier": "Castleford Oils", "kind": "invoice", "number": "CO-313", "date": "2026-06-25", "total": 337.20, "currency": "GBP", "file": "docs/CO-313.pdf", "month": "2026-06" },
+
+  { "id": "PF-1041", "supplierKey": "pennine", "supplier": "Pennine Fasteners", "kind": "invoice", "number": "PF-1041", "date": "2026-07-03", "total": 142.80, "currency": "GBP", "file": "docs/PF-1041.pdf", "month": "2026-07" },
+  { "id": "PF-1058", "supplierKey": "pennine", "supplier": "Pennine Fasteners", "kind": "invoice", "number": "PF-1058", "date": "2026-07-09", "total": 95.00, "currency": "GBP", "file": "docs/PF-1058.pdf", "month": "2026-07" },
+  { "id": "PF-1099", "supplierKey": "pennine", "supplier": "Pennine Fasteners", "kind": "invoice", "number": "PF-1099", "date": "2026-07-28", "total": 77.40, "currency": "GBP", "file": "docs/PF-1099.pdf", "month": "2026-07" },
+  { "id": "PF-C19", "supplierKey": "pennine", "supplier": "Pennine Fasteners", "kind": "credit_note", "number": "PF-C19", "date": "2026-07-30", "total": -77.40, "currency": "GBP", "file": "docs/PF-C19.pdf", "month": "2026-07" },
+
+  { "id": "SH-2291", "supplierKey": "stackhaul", "supplier": "Stackhaul", "kind": "invoice", "number": "SH-2291", "date": "2026-07-08", "total": 101.63, "currency": "USD", "file": "docs/SH-2291.pdf", "month": "2026-07" },
+  { "id": "SH-2310", "supplierKey": "stackhaul", "supplier": "Stackhaul", "kind": "invoice", "number": "SH-2310", "date": "2026-07-19", "total": 21.00, "currency": "USD", "file": "docs/SH-2310.pdf", "month": "2026-07" },
+
+  { "id": "TW-512", "supplierKey": "tidewater", "supplier": "Tidewater Chandlery", "kind": "invoice", "number": "TW-512", "date": "2026-07-12", "total": 129.95, "currency": "GBP", "file": "docs/TW-512.pdf", "month": "2026-07" },
+  { "id": "TW-519", "supplierKey": "tidewater", "supplier": "Tidewater Chandlery", "kind": "invoice", "number": "TW-519", "date": "2026-07-13", "total": 89.95, "currency": "GBP", "file": "docs/TW-519.pdf", "month": "2026-07" },
+
+  { "id": "MG-77", "supplierKey": "moorgate", "supplier": "Moorgate Electrical", "kind": "invoice", "number": "MG-77", "date": "2026-07-16", "total": 54.00, "currency": "GBP", "file": "docs/MG-77.pdf", "month": "2026-07" },
+
+  { "id": "NM-830", "supplierKey": "northwind", "supplier": "Northwind Marine", "kind": "invoice", "number": "NM-830", "date": "2026-07-20", "total": 158.25, "currency": "GBP", "file": "docs/NM-830.pdf", "month": "2026-07" }
+ ],
+ "evidence": [
+  {
+   "account": "bank",
+   "date": "2026-07-07",
+   "amount": 980.00,
+   "supplier": "Northwind Marine",
+   "document": "Statement of invoices outstanding at 30 June 2026",
+   "file": "docs/NM-outstanding-2026-06-30.pdf",
+   "note": "Invoices issued before the register starts. No automatic match is possible, so the payment is tied to the statement by hand."
+  }
+ ]
+}
